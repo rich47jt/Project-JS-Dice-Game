@@ -1,40 +1,54 @@
 function MakePlayer()
 {
-    //let player = {FirstName,Dice};
+    
+    let players = [];
     console.log("Entet FirstName")
     alert("Enter information")
     let reponse = prompt("Name");
 
         var player = {
-            FirstName : reponse
+            FirstName : reponse,
+            score: 0,
+            Dice1: 0,
+            Dice2: 0,
+            
         };
+        players.push(player);
         document.getElementById("Java").innerHTML = reponse;
     
     return reponse
 }
 
- function WinDiceShootOut()
+ function DiceShootOut()
  {
-     var R = document.getElementsByName("mySelect");
- console.log(Math.floor(Math.random()*20)+1); 
-  if(player.Dice > player.Dice) 
-   {
-     console.log("You have won this round");
-   }
-    if (player.Dice < player.Dice)
+     for (let index = 0; index < players.length; index++) {
+         const element = players[index];
+
+          player.Dice1 = Math.random(1)*20;
+
+         if (player.Dice1 > player.Dice1)
     {
-       console.log("You have lost this round")
-        R.remove(R.player);
-    }       
+      console.log("You Lose")
+      document.activeElement.remove(player);
+      
+    }
+    else if (player.Dice1 === player.Dice1)
+    {
+      player.Dice1 = Math.random(1)*20;
 
-   else if (player.Dice === player.Dice)
-   {
-    console.log(Math.floor(Math.random()*20)+1);   
+    }   
+     }
      
-   }
+   
+    return players
+         
+
+ }
+ 
 
 
-}
+
+
 
 
 

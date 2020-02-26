@@ -1,22 +1,16 @@
+let players = [];
 function MakePlayer()
 {
-    
-    let players = [];
-    console.log("Entet FirstName")
-    alert("Enter information")
-    let reponse = prompt("Name");
-
-        var player = {
-            FirstName : reponse,
-            score: 0,
-            Dice1: 0,
-            Dice2: 0,
-            
-        };
+    for (let index = 0; index < 10; index++) {
+        console.log("Entet FirstName")
+        alert("Enter information")
+        let reponse = prompt("Name");
+                 var player = {
+               FirstName : reponse,
+               score: 0
+         };
         players.push(player);
-        document.getElementById("Java").innerHTML = reponse;
-    
-    return reponse
+    }
 }
 
  function DiceShootOut()

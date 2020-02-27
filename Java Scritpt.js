@@ -1,43 +1,108 @@
 let players = [];
+
 function MakePlayer()
 {
     for (let index = 0; index < 10; index++) {
         console.log("Entet FirstName")
         alert("Enter information")
-        let reponse = prompt("Name");
+        let response = prompt("Name");
                  var player = {
-               FirstName : reponse,
-               score: 0
+               FirstName : response,
+               score: 0,
+               DiceRoll: 0,
+          
          };
-        players.push(player);
-    }
-}
-
- function DiceShootOut()
- {
-     for (let index = 0; index < players.length; index++) {
-         const element = players[index];
-
-          player.Dice1 = Math.random(1)*20;
-
-         if (player.Dice1 > player.Dice1)
-    {
-      console.log("You Lose")
-      document.activeElement.remove(player);
-      
-    }
-    else if (player.Dice1 === player.Dice1)
-    {
-      player.Dice1 = Math.random(1)*20;
-
-    }   
-     }
-     
+        players.push(player); 
+        myfunction();
    
-    return players
+    }
+   players.forEach(myfunction);
+};
+
+function  myfunction(player)
+{
+    player = {
+        FirstName,
+        score: 0,
+   
+  };
+     document.getElementById("Java").innerHTML = players[i].FirstName;
+    
+};
+
+
+    function Round1()
+
+    {    var x = players[i].score + 1;
+        for (let index = 0; index < 3; index++) {
+            console.log("rolling dice")
+            alert("game is going")
+            var Dice = Math.floor(Math.random(1)*6);
+            player[i].DiceRoll = Dice;
+            if(players[i].DiceRoll > players[i].DiceRoll)
+            {
+                players[i].score = x;
+                return player[i].score;
+            }
+            if(players.score <= 0)
+            {
+                document.getElementById(players[i]).remove(player);
+                document.getElementById("Java").innerHTML = players[i].FirstName;
+    
+            }
+            if(players[i].count === 4)
+            {
+                break;
+            }
+        }
+    };
+
+    function Round2()
+
+    {    var x = players[i].score + 1;
+        for (let index = 0; index < 2; index++) {
+            console.log("rolling dice")
+            alert("game is going")
+            var Dice = Math.floor(Math.random(1)*4);
+            player[i].DiceRoll = Dice;
+            if(players[i].DiceRoll > players[i].DiceRoll)
+            {
+                players[i].score = x;
+                return player[i].score;
+            }
+            if(players.score <= 0)
+            {
+                document.getElementById(players[i]).remove(player);
+                document.getElementById("Java").innerHTML = players[i].FirstName;
+    
+            }
+            if(players[i].count === 2)
+            {
+                break;
+            }
+        }
+    };
+
+    function DiceShootOut()
+    {
+        for (let index = 0; index <  4; index++) {
+            console.log("Dice Shootout");
+            alert("game on")
+            var Dice =Math.floor(Math.random(1)*20);
+            player[i].DiceRoll = Dice;
+            
+            
+            
+
+            
+        }
+    }
+
          
 
- }
+ 
+
+ 
  
 
 

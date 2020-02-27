@@ -30,10 +30,11 @@ function  myfunction(player)
     
 };
 
+ var x = players[i].score + 1;
+ 
+    function Gameplay1()
 
-    function Round1()
-
-    {    var x = players[i].score + 1;
+    {   
         for (let index = 0; index < 3; index++) {
             console.log("rolling dice")
             alert("game is going")
@@ -52,14 +53,15 @@ function  myfunction(player)
             }
             if(players[i].count === 4)
             {
-                break;
+                Gameplay2()
             }
         }
     };
 
-    function Round2()
+ 
+    function Gameplay2()
 
-    {    var x = players[i].score + 1;
+    {   
         for (let index = 0; index < 2; index++) {
             console.log("rolling dice")
             alert("game is going")
@@ -84,13 +86,28 @@ function  myfunction(player)
     };
 
     function DiceShootOut()
-    {
+    {    
         for (let index = 0; index <  4; index++) {
             console.log("Dice Shootout");
             alert("game on")
             var Dice =Math.floor(Math.random(1)*20);
             player[i].DiceRoll = Dice;
-            
+            if(players[i].DiceRoll > players[i].DiceRoll)
+            {
+                players[i] = x;
+                document.getElementById("Java").innerHTML = players[i].FirstName;
+
+            }
+            if(players[i].score > players[i].score)
+            {
+                document.getElementById(players[i]).remove(player);
+                document.getElementById("Java").innerHTML = players[i].FirstName;
+            }
+            if(players[i] === 1)
+            {
+                Console.log("You have won")
+            }
+                
             
             
 
